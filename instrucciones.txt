@@ -1,0 +1,26 @@
+INSTRUCCIONES PARA CORRER LA APP LOCALMENTE
+
+
+REQUISITOS
+- Node.js v18 o superior
+- npm
+
+PASOS
+1. Clona el repositorio o descarga el codigo
+2. Abre una terminal en la carpeta del proyecto
+3. Ejecuta: npm install
+4. Ejecuta: npm run dev
+5. Abre el navegador en: http://localhost:5173
+
+FUNCIONALIDADES
+- Ver 6 Pokemon por pagina
+- Buscar Pokemon por nombre en tiempo real
+- Navegar entre paginas con botones Anterior y Siguiente
+- Hacer clic en un Pokemon para ver su informacion detallada
+- Cerrar el modal con la X o haciendo clic fuera
+
+TECNOLOGIAS
+- React 18
+- Redux Toolkit
+- Vite
+- PokéAPI (https://pokeapi.co/)
