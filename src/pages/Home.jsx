@@ -40,9 +40,16 @@ function Home() {
   return (
     <div style={{ minHeight: '100vh', background: '#1a1a2e', padding: '20px' }}>
       <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-        <h1 style={{ textAlign: 'center', color: 'white', fontSize: '2rem', marginBottom: '20px' }}>
-          Pokédex
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
+         <span style={{ color: 'white', fontSize: '1rem', fontWeight: 'bold' }}>
+            
+            Isaac Alejandro Chulim Cervantes
+         </span>
+         <h1 style={{ color: 'white', fontSize: '2rem', margin: 0 }}>
+             Pokédex
         </h1>
+         <span style={{ width: '200px' }} />
+        </div>
         <SearchBar />
         {loading ? (
           <p style={{ textAlign: 'center', color: 'white' }}>Cargando Pokémon...</p>
