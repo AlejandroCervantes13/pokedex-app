@@ -40,6 +40,7 @@ Abre el navegador en http://localhost:5173
 
 ## Estructura del proyecto
 
+```
 src
  ├── components
  │   ├── PokemonCard.jsx
@@ -52,7 +53,7 @@ src
  │   ├── store.js
  │   └── pokemonSlice.js
  └── App.jsx
-
+```
 ## Documentación técnica
 
 - La app consume la PokéAPI para obtener 150 Pokémon al inicio
