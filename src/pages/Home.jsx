@@ -31,29 +31,28 @@ function Home() {
   }, [])
 
   const filtered = pokemons
-  .filter((p) => p.name.toLowerCase().includes(searchTerm.toLowerCase()))
-  .sort((a, b) => {
-    if (a.name < b.name) return -1
-    if (a.name > b.name) return 1
-    return 0
-  })
-  
+    .filter((p) => p.name.toLowerCase().includes(searchTerm.toLowerCase()))
 
   const totalPages = Math.ceil(filtered.length / LIMIT)
-  const paginated = filtered.slice(currentPage * LIMIT, currentPage * LIMIT + LIMIT)
+  const paginated = filtered
+    .slice(currentPage * LIMIT, currentPage * LIMIT + LIMIT)
+    .sort((a, b) => {
+      if (a.name < b.name) return -1
+      if (a.name > b.name) return 1
+      return 0
+    })
 
   return (
     <div style={{ minHeight: '100vh', background: '#1a1a2e', padding: '20px' }}>
       <div style={{ maxWidth: '900px', margin: '0 auto' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
-         <span style={{ color: 'white', fontSize: '1rem', fontWeight: 'bold' }}>
-            
+          <span style={{ color: 'white', fontSize: '1rem', fontWeight: 'bold' }}>
             Isaac Alejandro Chulim Cervantes
-         </span>
-         <h1 style={{ color: 'white', fontSize: '2rem', margin: 0 }}>
-             Pokédex
-        </h1>
-         <span style={{ width: '200px' }} />
+          </span>
+          <h1 style={{ color: 'white', fontSize: '2rem', margin: 0 }}>
+            Pokédex
+          </h1>
+          <span style={{ width: '200px' }} />
         </div>
         <SearchBar />
         {loading ? (
