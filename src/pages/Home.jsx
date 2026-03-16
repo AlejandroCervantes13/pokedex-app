@@ -30,9 +30,14 @@ function Home() {
     fetchPokemons()
   }, [])
 
-  const filtered = pokemons.filter((p) =>
-    p.name.toLowerCase().includes(searchTerm.toLowerCase())
-  )
+  const filtered = pokemons
+  .filter((p) => p.name.toLowerCase().includes(searchTerm.toLowerCase()))
+  .sort((a, b) => {
+    if (a.name < b.name) return -1
+    if (a.name > b.name) return 1
+    return 0
+  })
+  
 
   const totalPages = Math.ceil(filtered.length / LIMIT)
   const paginated = filtered.slice(currentPage * LIMIT, currentPage * LIMIT + LIMIT)
